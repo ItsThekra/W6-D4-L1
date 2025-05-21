@@ -1,25 +1,42 @@
 import React from 'react'
 
+import "../assets/styles/Courses.css";
+
 const courses = [
-  { title: 'الأمن السيبراني', description: 'تعلم أساسيات الأمن السيبراني.', duration: '4 أسابيع' },
-  { title: 'برمجة الويب', description: 'تعلم HTML و CSS و JavaScript.', duration: '6 أسابيع' },
-  { title: 'الذكاء الاصطناعي', description: 'مقدمة في الذكاء الاصطناعي.', duration: '5 أسابيع' }
+  {
+    title: "الأمن السيبراني",
+    description: "تعلم الحماية الرقمية",
+    duration: "4 أسابيع",
+    image: "https://cdn.tuwaiq.edu.sa/initiatives_admin/images/5zfvtxnl.uqu.webp",
+  },
+  {
+    title: "برمجة الويب",
+    description: "HTML, CSS, JavaScript",
+    duration: "6 أسابيع",
+    image: "https://cdn.tuwaiq.edu.sa/initiatives_admin/images/bdp2dbpf.alb.webp",
+  },
+  {
+    title: "الذكاء الاصطناعي",
+    description: "مقدمة في AI",
+    duration: "5 أسابيع",
+    image: "https://cdn.tuwaiq.edu.sa/initiatives_admin/images/vqo0wdmq.ajk.webp",
+  },
 ];
 
 export default function Courses() {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">الدورات</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {courses.map((course, i) => (
-          <div key={i} className="border rounded p-4 shadow bg-white">
-            <h3 className="font-semibold text-lg mb-2">{course.title}</h3>
-            <p className="text-gray-600 mb-1">{course.description}</p>
-            <p className="text-sm text-gray-500">المدة: {course.duration}</p>
+    <section className="courses">
+      <h2>الدورات التدريبية</h2>
+      <div className="course-grid">
+        {courses.map((course, index) => (
+          <div className="course-card" key={index}>
+            <img src={course.image} alt={course.title} className="course-image" />
+            <h3>{course.title}</h3>
+            <p>{course.description}</p>
+            <span>{course.duration}</span>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }
-

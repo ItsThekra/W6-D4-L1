@@ -1,24 +1,23 @@
 import React from 'react'
 
+import "../assets/styles/Contact.css";
+
 export default function Contact() {
   return (
-    <div className="p-6">
-      <h2 className="text-2xl font-bold mb-4">تواصل معنا</h2>
-      <form className="space-y-4">
-        <div>
-          <label className="block text-sm">الاسم</label>
-          <input type="text" className="w-full p-2 border rounded" />
-        </div>
-        <div>
-          <label className="block text-sm">البريد الإلكتروني</label>
-          <input type="email" className="w-full p-2 border rounded" />
-        </div>
-        <div>
-          <label className="block text-sm">الرسالة</label>
-          <textarea className="w-full p-2 border rounded"></textarea>
-        </div>
-        <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded">إرسال</button>
+    <section className="contact">
+      <h2>تواصل معنا</h2>
+      <form>
+        <label>الاسم</label>
+        <input type="text" placeholder="اكتب اسمك" />
+        
+        <label>البريد الإلكتروني</label>
+        <input type="email" placeholder="example@email.com" />
+        
+        <label>الرسالة</label>
+        <textarea placeholder="اكتب رسالتك هنا..."></textarea>
+        
+        <button type="submit">إرسال</button>
       </form>
-    </div>
+    </section>
   );
 }
